@@ -1,0 +1,16 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.env
+
+# Streamlit
+.streamlit/config.toml
+
+# OS
+.DS_Store
+
+# VSCode or editors
+.vscode/
+.idea/
+
