@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 
+
 st.set_page_config(page_title="DAC CRS Data", layout="wide")
 st.title("DAC CRS Data Explorer")
 
@@ -87,3 +88,37 @@ st.dataframe(filtered.head(100))
 
 csv = filtered.to_csv(index=False).encode('utf-8')
 st.download_button("Download Data", csv, "filtered_crs_data.csv", "text/csv")
+
+col1,col2=st.columns(2)
+with col1:
+# --- Environment Focus Pie Chart ---
+    env_counts = filtered["Environment"].value_counts().reset_index()
+    env_counts.columns = ["Environment", "Count"]
+
+    fig_env = px.pie(
+        env_counts,
+        names="Environment",
+        values="Count",
+        title="Environment Focus in Projects",
+        hole=0.4
+    )
+    st.plotly_chart(fig_env, use_container_width=True) 
+with col2:
+    # --- SDG Focus Pie Chart ---
+    sdg_counts = filtered["SDGfocus"].dropna().value_counts().reset_index()
+    sdg_counts.columns = ["SDGfocus", "Count"]
+
+    fig_sdg = px.pie(
+        sdg_counts,
+        names="SDGfocus",
+        values="Count",
+        title="SDG Focus Distribution",
+        hole=0.4
+    )
+    st.plotly_chart(fig_sdg, use_container_width=True)
+
+
+
+
+
+
