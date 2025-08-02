@@ -15,3 +15,5 @@ __pycache__/
 .idea/
 
 data/crs_data.csv
+data/CRS 2023 data.csv
+data/CRS 2022 data.csv
