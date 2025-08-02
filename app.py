@@ -2,7 +2,6 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 
-
 st.set_page_config(layout="wide", page_title="ImpactMap")
 
 st.title("Development Effectiveness Analysis")
@@ -39,17 +38,10 @@ with col2:
                    labels={'x': 'Year', 'y': 'Outcome Index'})
     st.plotly_chart(fig2, use_container_width=True)
 
-# Featured Reports
+# --- FEATURED REPORTS ---
 st.markdown("### Featured Reports")
 st.markdown("**Impact of ODA on Education in Sub-Saharan Africa**  \n*A comprehensive analysis of the effectiveness of development assistance in improving educational outcomes.*")
-st.image("https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/African_School_Children.jpg/640px-African_School_Children.jpg", width=300)
+st.image("https://www.shutterstock.com/image-photo/excited-elementary-school-pupils-wearing-600nw-1448019212.jpg", width=600)
 
 st.markdown("**Sustainable Agriculture Project in Rural India**  \n*A case study on a successful ODA-funded project promoting sustainable agricultural practices.*")
-st.image("https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Indian_Farmer.jpg/640px-Indian_Farmer.jpg", width=300)
-
-#Theme settings
-import streamlit as st
-
-# Initialize session state
-if "theme" not in st.session_state:
-    st.session_state.theme = "light"
+st.image("https://www.adaptation-fund.org/wp-content/uploads/2023/02/float-farm_Amtoli-min-scaled-e1677294423168.jpg", width=600)
