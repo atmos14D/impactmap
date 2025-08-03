@@ -1,0 +1,45 @@
+/* General body style */
+body {
+    background: linear-gradient(to right, #f5f7fa, #e4ecf3);
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Style headings */
+h1, h2, h3 {
+    font-weight: 600;
+    color: #1a2b4c;
+}
+
+/* Sidebar styling */
+.css-1d391kg {  /* class may change depending on Streamlit version */
+    background-color: #f2f2f2;
+}
+
+/* Metric components */
+[data-testid="stMetric"] {
+    background-color: #ffffff;
+    padding: 16px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 8px rgba(0,0,0,0.05);
+}
+
+/* Container enhancements */
+.stContainer {
+    padding-top: 1rem;
+}
+
+/* Expander headers */
+.stExpanderHeader {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+/* Test: change background color */
+.stApp {
+    background-color:#f8f9fc;
+}
+
+h1 {
+    color: #1a2b4c;
+    font-weight: 700;
+}
+

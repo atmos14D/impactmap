@@ -2,6 +2,27 @@
 
 import streamlit as st
 
+def local_css(css_path):
+    with open(css_path) as f:
+        st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
+
+local_css("styles/main.css")  
+
+
+st.markdown(
+    """
+    <style>
+    .stApp {
+        background-image: url("https://t4.ftcdn.net/jpg/07/57/08/41/240_F_757084120_qKhVMW684z6CGpb305pQtS3tBDU2xRVJ.jpg");
+        background-size: cover;
+        background-attachment: fixed;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
+
 st.set_page_config(page_title="ImpactMap | Overview", layout="wide")
 
 st.title(" Overview")
@@ -40,7 +61,7 @@ By hosting this Data Dive, **USPC brings together youth innovators, data scienti
 
 st.markdown("### 🌍 Why It Matters")
 st.markdown("""
-With **trillions in global aid mobilized each year**, understanding where resources go — and how effectively they’re used — is more important than ever.
+With **trillions in global aid mobilized each year**, understanding where resources go and how effectively they’re used is more important than ever.
 
 Whether you're a student, policy analyst, or development practitioner, **ImpactMap** offers a clear window into the global development finance ecosystem.
 """)

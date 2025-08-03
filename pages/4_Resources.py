@@ -3,6 +3,29 @@
 import streamlit as st
 import pandas as pd
 
+
+def local_css(css_path):
+    with open(css_path) as f:
+        st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
+
+local_css("styles/main.css")  
+
+
+st.markdown(
+    """
+    <style>
+    .stApp {
+        background-image: url("https://t3.ftcdn.net/jpg/03/72/42/02/240_F_372420244_M6e2ejjsJFsnkKjGpldJzBWZGemmDl3P.jpg");
+        background-size: cover;
+        background-attachment: fixed;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
+
+
 st.set_page_config(page_title="ImpactMap | Resources", layout="wide")
 
 st.title("Resources")
