@@ -54,11 +54,10 @@ Many ODA datasets are vast but difficult to analyze in a policy-relevant context
 
 ### 🧪 Installation
 
-```bash
+`'bash
 git clone https://github.com/YOUR_USERNAME/impactmap.git
 cd impactmap
-pip install -r requirements.txt
+pip install -r requirements.txt 
 
-
-## 📂 Project Structure
-
+## Run the App
+streamlit run app.py
